@@ -1,9 +1,14 @@
 # Simple Blog based on Laravel 5.3 php framework
 
 ## Installation notes
-- Rename .env.example to .env (will be automated soon using a bash script)
-- In the .env file, change the app key to a random string of choice
+- git clone https://github.com/pensart/Simple-laravel-blog.git larablog-test
+
+> in future releases i will provide a bash script to automate these tasks
+
+- composer install
+- mv .env.example .env
 - commandline: touch database/blog.sqlite (to make an empte database file)
+- php artisan migrate (this will create the database tables)
 
 ## Work in progress
 - [x] Fresh Laravel 5.3 installation
