@@ -2,8 +2,8 @@
 
 ## Work in progress
 - [x] Fresh Laravel 5.3 installation
-- [] Configuring database to sqlite
-- [] Configuring locales (Belgian Dutch)
+- [ ] Configuring database to sqlite
+- [x] Configuring locales (Belgian Dutch)
 
 # Laravel PHP Framework
 
