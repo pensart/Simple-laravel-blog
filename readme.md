@@ -3,7 +3,7 @@
 ## Installation notes
 - git clone https://github.com/pensart/Simple-laravel-blog.git larablog-test
 
-> in future releases i will provide a bash script to automate these tasks
+> In future releases i will provide a bash script to automate these tasks
 
 - composer install
 - mv .env.example .env
