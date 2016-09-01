@@ -1,8 +1,12 @@
 # Simple Blog based on Laravel 5.3 php framework
 
+## Installation notes
+- Rename .env.example to .env (will be automated soon using a bash script)
+
 ## Work in progress
 - [x] Fresh Laravel 5.3 installation
-- [ ] Configuring database to sqlite
+- [x] Create blog.sqlite file in the database directory
+- [x] Configuring database to sqlite
 - [x] Configuring locales (Belgian Dutch)
 
 # Laravel PHP Framework
