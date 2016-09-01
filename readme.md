@@ -1,3 +1,10 @@
+# Simple Blog based on Laravel 5.3 php framework
+
+## Work in progress
+- [x] Fresh Laravel 5.3 installation
+- [] Configuring database to sqlite
+- [] Configuring locales (Belgian Dutch)
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
