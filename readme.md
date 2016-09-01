@@ -5,7 +5,7 @@
 > Check the official laravel site for the requirements https://laravel.com/docs/5.3/installation
 > Tip: I recomment Homestead (vagrantbox) 
 
-- git clone https://github.com/pensart/Simple-laravel-blog.git larablog-test
+- git clone https://github.com/pensart/Simple-laravel-blog.git
 
 > In future releases i will provide a bash script to automate these tasks
 
