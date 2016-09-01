@@ -2,6 +2,7 @@
 
 ## Installation notes
 - Rename .env.example to .env (will be automated soon using a bash script)
+- In the .env file, change the app key to a random string of choice
 
 ## Work in progress
 - [x] Fresh Laravel 5.3 installation
