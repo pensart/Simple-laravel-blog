@@ -11,6 +11,7 @@
 
 - composer install
 - mv .env.example .env
+- php artisan key:generate (generate a key inside the .env file)
 - commandline: touch database/blog.sqlite (to make an empte database file)
 - php artisan migrate (this will create the database tables)
 - click on register to register a new user
