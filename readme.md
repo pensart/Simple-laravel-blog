@@ -1,6 +1,10 @@
 # Simple Blog based on Laravel 5.3 php framework
 
 ## Installation notes
+> Be sure that your envirement is setup to run a laravel installation.
+> Check the official laravel site for the requirements https://laravel.com/docs/5.3/installation
+> Tip: I recomment Homestead (vagrantbox) 
+
 - git clone https://github.com/pensart/Simple-laravel-blog.git larablog-test
 
 > In future releases i will provide a bash script to automate these tasks
