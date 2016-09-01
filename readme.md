@@ -13,6 +13,7 @@
 - mv .env.example .env
 - commandline: touch database/blog.sqlite (to make an empte database file)
 - php artisan migrate (this will create the database tables)
+- click on register to register a new user
 
 ## Work in progress
 - [x] Fresh Laravel 5.3 installation
