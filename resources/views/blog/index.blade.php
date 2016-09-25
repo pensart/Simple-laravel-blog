@@ -15,6 +15,7 @@
                 <p><a href="{{ route('blog.show', $post->id) }}">Lees meer...</a></p>
             </article>
         @endforeach
+        {!! $posts->links() !!}
     @else
         <p>Helaas geen artikels gevonden!</p>
     @endif
