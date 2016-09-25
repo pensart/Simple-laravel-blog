@@ -13,14 +13,8 @@
 
 // TODO: Remove commented lines when succeeding
 // TODO: Remove the HomeController ?
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-//
-//Auth::routes();
-//
-//Route::get('/home', 'HomeController@index');
-
 Auth::routes();
 Route::get ('/', 'BlogController@index')->name('blog.index');
 Route::get ('post/{id}', 'BlogController@show')->name('blog.show');
+Route::get('/home', 'HomeController@index');
+
