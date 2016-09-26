@@ -21,7 +21,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = auth()->user()->posts;
         return view('admin.posts.index', compact('posts'));
     }
 
@@ -71,6 +71,7 @@ class PostsController extends Controller
     public function edit($id)
     {
         $post = Post::findOrFail($id);
+        $this->authorize('update', $post);
         return view('admin.posts.edit', compact('post'));
     }
 
@@ -84,6 +85,7 @@ class PostsController extends Controller
     public function update(SavePostRequest $request, $id)
     {
         $post = Post::findOrFail($id);
+        $this->authorize('update', $post);
         $post->update($request->only('title', 'body'));
         return redirect(route('posts.index'));
     }
@@ -97,6 +99,7 @@ class PostsController extends Controller
     public function destroy($id)
     {
         $post = Post::findOrFail($id);
+        $this->authorize('update', $post);
         $post->delete();
         return redirect(route('posts.index'));
     }
