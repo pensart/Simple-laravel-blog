@@ -16,6 +16,6 @@ Route::get ('/', 'BlogController@index')->name('blog.index');
 Route::get ('post/{id}', 'BlogController@show')->name('blog.show');
 Route::get('/home', 'HomeController@index');
 
-// Admin posts routes
+// Admin posts routes, auth is handled in the controller
 Route::get ('admin/posts/confirm/{id}', 'Admin\PostsController@destroyConfirm')->name('posts.confirm');
 Route::resource('admin/posts', 'Admin\PostsController');
