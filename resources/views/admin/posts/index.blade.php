@@ -9,7 +9,7 @@
         <ul>
             @foreach($posts as $post)
                 <li>
-                    <a href="{{--{{ route('admin.posts.edit', $post->id) }}--}}">{{ $post->title  }}</a>
+                    <a href="{{ route('posts.edit', $post->id) }}">{{ $post->title  }}</a>
                 </li>
             @endforeach
         </ul>
