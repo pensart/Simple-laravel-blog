@@ -21,6 +21,9 @@
 - [x] Create blog.sqlite file in the database directory
 - [x] Configuring database to sqlite
 - [x] Configuring locales (Belgian Dutch)
+- [x] Only admins can register new users
+- [x] Registered users can write, update and delete posts
+- [x] Author can only view, update or delete own posts
 
 # Laravel PHP Framework
 
