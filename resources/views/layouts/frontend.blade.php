@@ -20,7 +20,7 @@
     </main>
     <footer>
         <div class="container">
-            &copy;{{ date('Y') }}  Guy Pensart | <a href="#">Admin</a>
+            &copy;{{ date('Y') }}  Guy Pensart | <a href="/admin/posts">Admin</a>
         </div>
     </footer>
 </body>

@@ -10,8 +10,17 @@
             @foreach($posts as $post)
                 <li>
                     <a href="{{ route('posts.edit', $post->id) }}">{{ $post->title  }}</a>
+                    {!! Form::open([
+                        'route'=>['posts.destroy', $post->id],
+                        'method'=>'delete',
+                        'class'=>'destroy'
+                    ]) !!}
+                    {!! Form::submit('Verwijder artikel') !!}
+                    {!! Form::close() !!}
                 </li>
             @endforeach
         </ul>
+    @else
+        <p>Er zijn nog geen artikels aanwezig</p>
     @endif
 @endsection
