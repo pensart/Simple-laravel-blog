@@ -11,10 +11,10 @@
 |
 */
 
-// TODO: Remove commented lines when succeeding
-// TODO: Remove the HomeController ?
 Auth::routes();
 Route::get ('/', 'BlogController@index')->name('blog.index');
 Route::get ('post/{id}', 'BlogController@show')->name('blog.show');
 Route::get('/home', 'HomeController@index');
 
+
+Route::resource('admin/posts', 'Admin\PostsController');
