@@ -90,6 +90,13 @@ class PostsController extends Controller
         return redirect(route('posts.index'));
     }
 
+    public function destroyConfirm($id)
+    {
+        $post = Post::findOrFail($id);
+        $this->authorize('update', $post);
+        return view('admin.posts.confirm', compact('post'));
+    }
+
     /**
      * Remove the specified resource from storage.
      *

@@ -10,13 +10,13 @@
             @foreach($posts as $post)
                 <li>
                     <a href="{{ route('posts.edit', $post->id) }}">{{ $post->title  }}</a>
-                    {!! Form::open([
-                        'route'=>['posts.destroy', $post->id],
-                        'method'=>'delete',
-                        'class'=>'destroy'
+                    <a href="{{ route('posts.confirm', $post->id) }}" class="link--remove">Remove</a>
+{{--                    {!! Form::model($post, [
+                        'route'=>['posts.confirm', $post->id],
+                        'method'=> 'put'
                     ]) !!}
                     {!! Form::submit('Verwijder artikel') !!}
-                    {!! Form::close() !!}
+                    {!! Form::close() !!}--}}
                 </li>
             @endforeach
         </ul>
