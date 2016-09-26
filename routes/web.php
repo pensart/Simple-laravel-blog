@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
-
+Route::get ('/', 'BlogController@index')->name('blog.index');
+Route::get ('post/{id}', 'BlogController@show')->name('blog.show');
 Route::get('/home', 'HomeController@index');
+
+// Admin posts routes
+Route::get ('admin/posts/confirm/{id}', 'Admin\PostsController@destroyConfirm')->name('posts.confirm');
+Route::resource('admin/posts', 'Admin\PostsController');
