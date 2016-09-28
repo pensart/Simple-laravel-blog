@@ -19,3 +19,8 @@ Route::get('/home', 'HomeController@index');
 // Admin posts routes, auth is handled in the controller
 Route::get ('admin/posts/confirm/{id}', 'Admin\PostsController@destroyConfirm')->name('posts.confirm');
 Route::resource('admin/posts', 'Admin\PostsController');
+
+// Only super users routes
+Route::group(['prefix'=>'super', 'middleware'=>['auth', 'auth.super']], function() {
+
+});
