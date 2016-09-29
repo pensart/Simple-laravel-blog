@@ -22,10 +22,11 @@
 - [x] Create blog.sqlite file in the database directory
 - [x] Configuring database to sqlite
 - [x] Configuring locales (Belgian Dutch)
-- [x] Only admins can register new users
 - [x] Added super user
-- [x] Registered users can write, update and delete posts
+- [x] Only Super Users can register new admin's
+- [x] Admin users can write, update and delete posts
 - [x] Author can only view, update or delete own posts
+- [x] Super Users have full control over other posts
 
 # Laravel PHP Framework
 
