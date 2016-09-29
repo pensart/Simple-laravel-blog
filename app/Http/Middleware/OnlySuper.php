@@ -16,7 +16,7 @@ class OnlySuper
     public function handle($request, Closure $next)
     {
         if (!auth()->user()->super) {
-            return redirect()->guest(route('/'));
+            return redirect()->guest(route('blog.index'));
         }
 
         return $next($request);

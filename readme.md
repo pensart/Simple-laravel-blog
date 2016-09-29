@@ -1,6 +1,7 @@
 # Simple Blog based on Laravel 5.3 php framework
 
 ## Installation notes
+### Warning: need to update these installation notes when project is completed
 > Be sure that your envirement is setup to run a laravel installation.
 > Check the official laravel site for the requirements https://laravel.com/docs/5.3/installation
 > Tip: I recomment Homestead (vagrantbox) 

@@ -38,7 +38,6 @@
                     {{ config('app.name', 'Laravel') }}
                 </a>
             </div>
-
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
@@ -77,6 +76,11 @@
             </div>
         </div>
     </nav>
+    @if(auth()->user() !== null && auth()->user()->super)
+        <h1 class="super">
+                Super user detected
+        </h1>
+    @endif
 
     @yield('content')
 
