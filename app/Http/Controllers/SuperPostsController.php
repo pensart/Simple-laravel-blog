@@ -21,7 +21,7 @@ class SuperPostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::paginate(20);
         return view('posts.superIndex', compact('posts'));
     }
 
