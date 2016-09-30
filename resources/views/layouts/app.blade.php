@@ -78,13 +78,15 @@
             </div>
         </div>
     </nav>
-    @if(auth()->user() !== null && auth()->user()->super)
-        <h1 class="super">
-                Super user detected
-        </h1>
-    @endif
+    <div class="container">
+        @if(auth()->user() !== null && auth()->user()->super)
+            <h1 class="super">
+                    Super user detected
+            </h1>
+        @endif
 
-    @yield('content')
+        @yield('content')
+    </div>
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>

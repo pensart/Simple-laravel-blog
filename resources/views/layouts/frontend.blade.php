@@ -18,10 +18,8 @@
     <main class="container">
         @yield('content')
     </main>
-    <footer>
-        <div class="container">
+    <footer class="container">
             &copy;{{ date('Y') }}  Guy Pensart | <a href="/login">Login</a>
-        </div>
     </footer>
 </body>
 </html>
