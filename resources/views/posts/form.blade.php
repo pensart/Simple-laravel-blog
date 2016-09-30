@@ -1,3 +1,4 @@
+{{ csrf_field() }}
 <ul>
     <li>
         {!! Form::label('title') !!}

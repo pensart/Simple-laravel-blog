@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
@@ -22,7 +22,7 @@ class PostsController extends Controller
     public function index()
     {
         $posts = auth()->user()->posts;
-        return view('admin.posts.index', compact('posts'));
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -32,7 +32,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('admin.posts.create');
+        return view('posts.create');
     }
 
     /**
@@ -72,7 +72,7 @@ class PostsController extends Controller
     {
         $post = Post::findOrFail($id);
         $this->authorize('update', $post);
-        return view('admin.posts.edit', compact('post'));
+        return view('posts.edit', compact('post'));
     }
 
     /**
@@ -94,7 +94,7 @@ class PostsController extends Controller
     {
         $post = Post::findOrFail($id);
         $this->authorize('update', $post);
-        return view('admin.posts.confirm', compact('post'));
+        return view('posts.confirm', compact('post'));
     }
 
     /**

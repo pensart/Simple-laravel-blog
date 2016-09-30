@@ -8,6 +8,7 @@
         'method' => 'delete',
         'route' => ['posts.destroy', $post->id]
     ]) !!}
+    {{ csrf_field() }}
     {!! Form::submit('Ja ik ben zeker', ['class'=>'btn btn-danger']) !!}
     <a href="{{ route('posts.index') }}" class="btn btn-primary">Annuleren!</a>
     {!! Form::close() !!}
