@@ -22,7 +22,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::where('user_id', auth()->user()->id)->paginate(5);
+        $posts = Post::where('user_id', auth()->user()->id)->paginate(20);
         return view('posts.index', compact('posts'));
     }
 
