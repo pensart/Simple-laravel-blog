@@ -27,7 +27,7 @@ Route::group(['middleware'=>'auth'], function() {
 });
 
 // Only super users routes
-Route::group(['middleware'=>'auth.super'], function() {
+Route::group(['middleware'=>['auth','auth.super']], function() {
 
     Route::get ('/superPosts/confirm/{id}', 'SuperPostsController@destroyConfirm')->name('superPosts.confirm');
     Route::resource('/superPosts', 'SuperPostsController');

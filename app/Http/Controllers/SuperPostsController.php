@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SavePostRequest;
 use App\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -40,7 +41,7 @@ class SuperPostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SavePostRequest $request)
     {
         $post = new Post();
         $post->fill($request->only('title', 'body'));
@@ -80,7 +81,7 @@ class SuperPostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(SavePostRequest $request, $id)
     {
         $post = Post::findOrFail($id);
         $post->update($request->only('title', 'body'));
