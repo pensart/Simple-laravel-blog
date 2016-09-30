@@ -14,9 +14,9 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->truncate();
 
         DB::table('users')->insert ([
-           'name' => 'Guy Pensart',
-            'email' => 'guy.pensart@hotmail.com',
-            'password' => bcrypt('super'),
+           'name' => env('FSU_NAME'),
+            'email' => env('FSU_EMAIL'),
+            'password' => bcrypt(env('FSU_PSW')),
             'super' => 1,
         ]);
     }
