@@ -51,6 +51,11 @@
                             {{--link to the super users post overview--}}
                             <a href="{{ url('/superPosts') }}">Artikels</a>
                         </li>
+                    @else
+                        <li>
+                            {{--link to the super users post overview--}}
+                            <a href="{{ url('/posts') }}">Artikels</a>
+                        </li>
                     @endif
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>

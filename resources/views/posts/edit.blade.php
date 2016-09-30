@@ -10,7 +10,7 @@
         'route'=>['posts.update', $post->id],
         'method'=> 'put'
     ]) !!}
-    @include('admin.posts.form', ['btnText'=>'Pas aan'] )
+    @include('posts.form', ['btnText'=>'Pas aan'] )
     {!! Form::close() !!}
 
 @endsection

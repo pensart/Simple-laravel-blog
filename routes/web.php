@@ -19,10 +19,10 @@ Route::get ('post/{id}', 'BlogController@show')->name('blog.show');
 Route::get('/home', 'HomeController@index');
 
 // Only routes for authorised members
-Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function() {
+Route::group(['middleware'=>'auth'], function() {
 
-    Route::get ('/posts/confirm/{id}', 'Admin\PostsController@destroyConfirm')->name('posts.confirm');
-    Route::resource('/posts', 'Admin\PostsController');
+    Route::get ('/posts/confirm/{id}', 'PostsController@destroyConfirm')->name('posts.confirm');
+    Route::resource('/posts', 'PostsController');
 
 });
 

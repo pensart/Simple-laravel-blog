@@ -9,7 +9,7 @@
     <a href="{{ route('posts.index') }}">Terug naar admin overzicht</a>
 
     {!! Form::open(['route'=>'posts.store']) !!}
-        @include('admin.posts.form', ['btnText'=>'Publiceer artikel'] )
+        @include('posts.form', ['btnText'=>'Publiceer artikel'] )
     {!! Form::close() !!}
 
 @endsection
