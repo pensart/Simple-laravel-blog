@@ -49,12 +49,11 @@
                     @if(auth()->user() !== null && auth()->user()->super)
                         <li>
                             {{--link to the super users post overview--}}
-                            <a href="{{ url('/superPosts') }}">Posts</a>
+                            <a href="{{ url('/superPosts') }}">Artikels</a>
                         </li>
                     @endif
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
-                        {{--<li><a href="{{ url('/register') }}">Register</a></li>--}}
                     @else
                         <li class="dropdown">
 
@@ -85,12 +84,6 @@
         </div>
     </nav>
     <div class="container">
-        @if(auth()->user() !== null && auth()->user()->super)
-            <h1 class="super">
-                    Super user detected
-            </h1>
-        @endif
-
         @yield('content')
     </div>
 
