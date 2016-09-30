@@ -19,13 +19,5 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('super'),
             'super' => 1,
         ]);
-
-        factory(App\User::class, 5)
-            ->create()
-            ->each(function($u) {
-               for ($i=0; $i<rand(2,3);$i++) {
-                   $u->posts()->save(factory(App\Post::class)->make());
-               }
-            });
     }
 }

@@ -12,10 +12,13 @@
 
 - composer install
 - mv .env.example .env
-- php artisan key:generate (generate a key inside the .env file)
-- commandline: touch database/blog.sqlite (to make an empte database file)
+- cmd:( php artisan key:generate ) generate a key inside the .env file
+- cmd: ( touch database/blog.sqlite ) to make an empte database file
 - php artisan migrate (this will create the database tables)
 - click on register to register a new user
+- cmd: ( php artisan db:seed ) to register the first super user
+- cmd: ( php artisan db:seed --class=FakeBlogWriters ) to get some fake users and posts to test
+- cmd: ( php artisan migrate:refresh --seed ) = reset db and register only the first super user
 
 ## Work in progress
 - [x] Fresh Laravel 5.3 installation
