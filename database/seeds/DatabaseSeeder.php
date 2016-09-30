@@ -11,6 +11,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('users')->truncate();
+
+        DB::table('users')->insert ([
+           'name' => 'Guy Pensart',
+            'email' => 'guy.pensart@hotmail.com',
+            'password' => bcrypt('super'),
+            'super' => 1,
+        ]);
+
         factory(App\User::class, 5)
             ->create()
             ->each(function($u) {
