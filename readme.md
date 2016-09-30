@@ -30,6 +30,7 @@
 - [x] Admin users can write, update and delete posts
 - [x] Author can only view, update or delete own posts
 - [x] Super Users have full control over other posts
+- [ ] Clean unused use classes in the controllers
 
 # Laravel PHP Framework
 
