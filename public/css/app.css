@@ -5767,7 +5767,7 @@ button.close {
     display: none !important; } }
 
 .error {
-  color: red; }
+  color: #bf4040; }
 
 .link--remove {
   color: red; }
