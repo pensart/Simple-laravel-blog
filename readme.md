@@ -15,7 +15,7 @@
 - cmd:( php artisan key:generate ) generate a key inside the .env file
 - cmd: ( touch database/blog.sqlite ) to make an empte database file
 - php artisan migrate (this will create the database tables)
-- click on register to register a new user
+- env: change the default first super user in the env file FSU_NAME=, FSU_EMAIL=, FSU_PSW=
 - cmd: ( php artisan db:seed ) to register the first super user
 - cmd: ( php artisan db:seed --class=FakeBlogWriters ) to get some fake users and posts to test
 - cmd: ( php artisan migrate:refresh --seed ) = reset db and register only the first super user
