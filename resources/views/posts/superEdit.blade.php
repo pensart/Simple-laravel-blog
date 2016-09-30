@@ -5,12 +5,12 @@
 @section('content')
 
     <h1>Wijzig het artikel</h1>
-    <a href="{{ route('posts.index') }}">Terug naar admin overzicht</a>
+    <a href="{{ route('superPosts.index') }}">Terug naar admin overzicht</a>
     {!! Form::model($post, [
-        'route'=>['posts.update', $post->id],
+        'route'=>['superPosts.update', $post->id],
         'method'=> 'put'
     ]) !!}
-    @include('admin.posts.form', ['btnText'=>'Pas aan'] )
+    @include('posts.superForm', ['btnText'=>'Pas aan'] )
     {!! Form::close() !!}
 
 @endsection

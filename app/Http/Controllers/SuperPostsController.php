@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Super;
+namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
@@ -21,7 +21,7 @@ class SuperPostsController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('super.posts.index', compact('posts'));
+        return view('posts.superIndex', compact('posts'));
     }
 
     /**
@@ -31,7 +31,7 @@ class SuperPostsController extends Controller
      */
     public function create()
     {
-        return view('admin.posts.create');
+        return view('posts.superCreate');
     }
 
     /**
@@ -47,7 +47,7 @@ class SuperPostsController extends Controller
 
         $request->user()->posts()->save($post);
 
-        return redirect(route('posts.index'));
+        return redirect(route('superPosts.index'));
     }
 
     /**
@@ -70,7 +70,7 @@ class SuperPostsController extends Controller
     public function edit($id)
     {
         $post = Post::findOrFail($id);
-        return view('admin.posts.edit', compact('post'));
+        return view('posts.superEdit', compact('post'));
     }
 
     /**
@@ -84,13 +84,13 @@ class SuperPostsController extends Controller
     {
         $post = Post::findOrFail($id);
         $post->update($request->only('title', 'body'));
-        return redirect(route('posts.index'));
+        return redirect(route('superPosts.index'));
     }
 
     public function destroyConfirm($id)
     {
         $post = Post::findOrFail($id);
-        return view('super.posts.confirm', compact('post'));
+        return view('posts.superConfirm', compact('post'));
     }
 
     /**
@@ -103,6 +103,6 @@ class SuperPostsController extends Controller
     {
         $post = Post::findOrFail($id);
         $post->delete();
-        return redirect(route('posts.index'));
+        return redirect(route('superPosts.index'));
     }
 }
