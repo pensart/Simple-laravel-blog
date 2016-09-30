@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\SavePostRequest;
 use App\Http\Controllers\Controller;
@@ -21,7 +22,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = auth()->user()->posts;
+        $posts = Post::where('user_id', auth()->user()->id)->paginate(5);
         return view('posts.index', compact('posts'));
     }
 

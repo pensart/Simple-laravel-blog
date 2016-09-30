@@ -14,6 +14,7 @@
                 </li>
             @endforeach
         </ul>
+        {{ $posts->links() }}
     @else
         <p>Er zijn nog geen artikels aanwezig</p>
     @endif
