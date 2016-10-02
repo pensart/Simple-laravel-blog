@@ -20,6 +20,11 @@
 - cmd: ( php artisan db:seed --class=FakeBlogWriters ) to get some fake users and posts to test
 - cmd: ( php artisan migrate:refresh --seed ) = reset db and register only the first super user
 
+
+## Development tips: Sass, Js, Browser sync
+- Since i'm using Homestead and mapped my domain to blog.local. The gulpfile.js browsersync setting is configured to use blog.local as gateway. Change it to your own url or remove it to use locahost as your default.
+- If u don't want any browserSync, just remove the .browserSync line in the gulpfile.js
+
 ## Work in progress
 - [x] Fresh Laravel 5.3 installation
 - [x] Create blog.sqlite file in the database directory
