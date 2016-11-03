@@ -37,6 +37,9 @@
 - [x] Super Users have full control over other posts
 - [ ] Clean unused use classes in the controllers
 
+## Fixes
+- [x] Laravel 5.3 early release paginator bug
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
